@@ -1,10 +1,13 @@
 const btnMenu = document.getElementById("menu-btn");
 const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
+const btnFecharMenu = document.getElementById("btn-fechar");
 
 btnMenu.onclick = () =>{
     sidebar.classList.toggle("ativado");
-    overlay.classList.toggle("hidden");
+}
+
+btnFecharMenu.onclick = () =>{
+    sidebar.classList.toggle("ativado");
 }
 
 

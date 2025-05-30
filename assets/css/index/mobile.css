@@ -1,5 +1,25 @@
 @media (max-width: 768px) {
-    
+
+    ul{
+        margin-top: 30px;
+        width: 250px;
+        display: block;
+    }
+    li{
+        width: 100%;
+    }
+
+    a{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    section{
+        flex-direction: column-reverse;
+    }
+
+
+
     .menu-btn-container{
         display: block !important;
         margin-right: 30px;
@@ -7,7 +27,7 @@
 
     .menu-btn-container i{
         margin-right: 30px;
-        font-size: 32px;
+        font-size: 30px;
         text-align: center;
         color: black;
         cursor: pointer;
@@ -24,6 +44,7 @@
         transition: left 0.3s ease;
         z-index: 1000;   
         overflow-y: auto;
+        overflow-x: hidden;
         background-color: rgba(255, 29, 123, 0.986);
     }
 
@@ -31,11 +52,23 @@
         right: 0px;
     }
 
-    .item-menu{
-        color: red;
-        background-color: aqua;
+    div.container-img{
+        width: 80%;
+    }
+
+    div.conteudo-da-section{
+        width: 100%;
+    }
+
+    div.container-links-footer{
+        display: grid;
+
+    }
+
+    li#btn-fechar{
         display: block;
-        padding: 10px;
+        font-size: 25px;
+        cursor: pointer;
     }
 
 }
