@@ -160,6 +160,12 @@ div.container-links-footer > div{
     gap: 12px;
 }
 
+div.container-links-footer > div.container-endereco-footer{
+    align-items: center;
+    text-align: center;
+}
+
+
 div.link-contatos{
     margin-left: 20px;
 }

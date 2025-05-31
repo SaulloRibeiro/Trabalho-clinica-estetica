@@ -45,7 +45,7 @@
         z-index: 1000;   
         overflow-y: auto;
         overflow-x: hidden;
-        background-color: rgba(255, 29, 123, 0.986);
+        background-color: white;
     }
 
     nav.menu.ativado{
@@ -62,9 +62,28 @@
 
     div.container-links-footer{
         display: grid;
-
+        align-content: center;
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px 20px;
     }
 
+    div.link-contatos{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    /* div.link-redes-sociais{
+    } */
+
+    div.container-endereco-footer{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .container-links-footer > div {
+        align-items: center;
+        text-align: center;
+    }
     li#btn-fechar{
         display: block;
         font-size: 25px;
