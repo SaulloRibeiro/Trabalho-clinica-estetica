@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/procedimentos/style.css">
+    <link rel="stylesheet" href="assets/css/procedimentos/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>S_etetics</title>
 </head>
@@ -31,7 +32,7 @@
           </header>
 
           
-        <section>
+        <section id="section-h1">
             <h1>Procedimentos</h1>
         </section>
         
@@ -39,7 +40,7 @@
             <section class="container-procedimento">
                 <h2>Procedimentos capilar</h2>
 
-                <div class="teste">
+                <div class="container-cards">
                     <article class="card">
                         <h3>Hidratação capilar</h3>
                         <div class="card-img">
@@ -47,7 +48,7 @@
                         </div>
                         <p class="valor-monetario">R$120,00</p>
                         <p>
-                            Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
                             Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
                         </p>
                     </article>
@@ -59,7 +60,7 @@
                         </div>
                         <p class="valor-monetario">R$30,00</p>
                         <p>
-                            Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
                             Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
                         </p>                
                     </article>
@@ -71,7 +72,7 @@
                         </div>
                         <p class="valor-monetario">R$75,00</p>
                         <p>
-                            Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
                             Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
                         </p>      
                     </article>        
@@ -81,83 +82,87 @@
             
             <section class="container-procedimento">
                 <h2>Procedimentos corporais</h2>
+                
+                <div class="container-cards">
+                    <article class="card">
+                        <h3>Radiofrequência</h3>
+                        <div class="card-img">
+                            <img src="assets/img/radiofrequencia.jpg" alt="Uma jovem mulher está deitada em uma marca, ela esta virada para cima, recebendo um procedimento estetico chamado radiofrequencia, no qual uma profissional passa uma máquina em sua barriga.">
+                        </div>
+                        <p class="valor-monetario">R$100,00</p>
+                        <p>
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
+                        </p>      
+                    </article>
 
-                <article class="card">
-                    <h3>Radiofrequência</h3>
-                    <div class="card-img">
-                        <img src="assets/img/radiofrequencia.jpg" alt="Uma jovem mulher está deitada em uma marca, ela esta virada para cima, recebendo um procedimento estetico chamado radiofrequencia, no qual uma profissional passa uma máquina em sua barriga.">
-                    </div>
-                    <p class="valor-monetario">R$100,00</p>
-                    <p>
-                        Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
-                        Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
-                    </p>      
-                </article>
+                    <article class="card">
+                        <h3>Depilação</h3>
+                        <div class="card-img">
+                            <img src="assets/img/depilacao.jpg" alt="Uma perna de uma jovem mulher, está apoida em uma marca e uma profissional, passa um produto para que a depilação possa acontecer.">
+                        </div>
+                        <p class="valor-monetario">R$100,00</p>
+                        <p>
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
+                        </p>      
+                    </article>
 
-                <article class="card">
-                    <h3>Depilação</h3>
-                    <div class="card-img">
-                        <img src="assets/img/depilacao.jpg" alt="Uma perna de uma jovem mulher, está apoida em uma marca e uma profissional, passa um produto para que a depilação possa acontecer.">
-                    </div>
-                    <p class="valor-monetario">R$100,00</p>
-                    <p>
-                        Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
-                        Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
-                    </p>      
-                </article>
-
-                <article class="card">
-                    <h3>Drenagem linfatica</h3>
-                    <div class="card-img">
-                        <img src="assets/img/dreanagem_linfatica.jpg" alt="Uma jovem mulher está deitada em uma marca, recebendo uma massagem no abdomen, essa massagem se trata de um processo estetico chamado Drenagem linfatica, que serve para eliminar gordura corporal.">
-                    </div>
-                    <p class="valor-monetario">R$250,00</p>
-                    <p>
-                        Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
-                        Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
-                    </p>      
-                </article>
-
+                    <article class="card">
+                        <h3>Drenagem linfatica</h3>
+                        <div class="card-img">
+                            <img src="assets/img/dreanagem_linfatica.jpg" alt="Uma jovem mulher está deitada em uma marca, recebendo uma massagem no abdomen, essa massagem se trata de um processo estetico chamado Drenagem linfatica, que serve para eliminar gordura corporal.">
+                        </div>
+                        <p class="valor-monetario">R$250,00</p>
+                        <p>
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
+                        </p>      
+                    </article>
+                </div>
+                
             </section>
 
             <section>
                 <h2>Procedimentos faciais</h2>
 
-                <article class="card">
-                    <h3>Botox</h3>
-                    <div class="card-img">
-                        <img src="assets/img/botox.jpg" alt="Uma jovem mulher está deitada em uma marca, ela está com os olhos fechados enquanto um profissional injeta produtos em seu rosto através de uma seringa.">
-                    </div>
-                    <p class="valor-monetario">R$135,00</p>
-                    <p>
-                        Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
-                        Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
-                    </p>      
-                </article>
+                <div class="container-cards">
+                    <article class="card">
+                        <h3>Botox</h3>
+                        <div class="card-img">
+                            <img src="assets/img/botox.jpg" alt="Uma jovem mulher está deitada em uma marca, ela está com os olhos fechados enquanto um profissional injeta produtos em seu rosto através de uma seringa.">
+                        </div>
+                        <p class="valor-monetario">R$135,00</p>
+                        <p>
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
+                        </p>      
+                    </article>
 
-                <article class="card">
-                    <h3>Limpeza de pele</h3>
-                    <div class="card-img">
-                        <img src="assets/img/limpeza-pele.jpg" alt="Um jovem mulher está deitada virada para cima, onde uma profissional passa um produto em seu rosto para limpar a pele.">
-                    </div>
-                    <p class="valor-monetario">R$100,00</p>
-                    <p>
-                        Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
-                        Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
-                    </p>      
-                </article>
+                    <article class="card">
+                        <h3>Limpeza de pele</h3>
+                        <div class="card-img">
+                            <img src="assets/img/limpeza-pele.jpg" alt="Um jovem mulher está deitada virada para cima, onde uma profissional passa um produto em seu rosto para limpar a pele.">
+                        </div>
+                        <p class="valor-monetario">R$100,00</p>
+                        <p>
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
+                        </p>      
+                     </article>
 
-                <article class="card">
-                    <h3>Nutrição facial</h3>
-                    <div class="card-img">
-                        <img src="assets/img/nutricao-facial-tratamento.jpg" alt="Uma jovem mulher está deitada em uma marca virada para cima e com os olhos fechados, enquanto uma profissional passa um produto em seu rosto.">
-                    </div>
-                    <p class="valor-monetario">R$80,00</p>
-                    <p>
-                        Descrição: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
-                        Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
-                    </p>      
-                </article>
+                    <article class="card">
+                        <h3>Nutrição facial</h3>
+                        <div class="card-img">
+                            <img src="assets/img/nutricao-facial-tratamento.jpg" alt="Uma jovem mulher está deitada em uma marca virada para cima e com os olhos fechados, enquanto uma profissional passa um produto em seu rosto.">
+                        </div>
+                        <p class="valor-monetario">R$80,00</p>
+                        <p>
+                            <span class="negrito">Descrição</span>: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ipsum maiores repellendus temporibus, tempore magnam a commodi qui officiis deserunt omnis ipsa. Eaque quam, id cum voluptatibus ipsa hic quasi.
+                            Et nesciunt perspiciatis magnam! Corrupti, quas atque fugiat impedit fugit animi labore ab, reiciendis pariatur numquam sit repellat est accusantium aliquid inventore earum eaque, doloremque ipsum consectetur soluta. Cum, optio!
+                        </p>      
+                    </article>
+                </div>    
             </section>
 
         </main>

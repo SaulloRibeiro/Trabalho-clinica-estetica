@@ -1,0 +1,96 @@
+@media (max-width: 768px) {
+    
+    ul{
+        margin-top: 30px;
+        width: 250px;
+        display: block;
+    }
+    li{
+        width: 100%;
+    }
+
+    a{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .menu-btn-container{
+        display: block !important;
+        margin-right: 30px;
+    }
+
+    .menu-btn-container i{
+        margin-right: 30px;
+        font-size: 30px;
+        text-align: center;
+        color: black;
+        cursor: pointer;
+    }
+
+    nav.menu{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 250px;
+        position: fixed;
+        right: -250px;
+        top: 0px;
+        transition: left 0.3s ease;
+        z-index: 1000;   
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: white;
+    }
+
+    nav.menu.ativado{
+        right: 0px;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    article{
+        width: 100%;
+        margin: auto;
+    }
+    
+
+    div.container-cards{
+        flex-direction: column;
+    }
+
+
+    div.container-links-footer{
+        display: grid;
+        align-content: center;
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px 20px;
+    }
+
+    div.link-contatos{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    /* div.link-redes-sociais{
+    } */
+
+    div.container-endereco-footer{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .container-links-footer > div {
+        align-items: center;
+        text-align: center;
+    }
+
+
+    li#btn-fechar{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+}
