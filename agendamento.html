@@ -1,11 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/agendamento/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>S_estetics</title>
 </head>
 <body>
-    
+    <div class="pagina">
+        <header>
+            <div class="logo-empresa"></div>
+
+            <div class="menu-btn-container" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="menu" id="sidebar">
+                <ul>
+                    <li id="btn-fechar"><i class="fa-solid fa-xmark"></i></li>
+                    <li><a class="item-menu" href="index.html">Home</a></li>
+                    <li><a class="item-menu" href="agendamento.html">Agendar</a></li>
+                    <li><a class="item-menu" href="procedimentos.html">procedimentos</a></li>
+                    <li><a class="item-menu" href="clinica.html">Clinica</a></li>
+                    <li><a class="item-menu" href="administrativo.html">Administrativo</a></li>
+                </ul>    
+            </nav>
+          </header>
+
+          <main>
+
+            <div class="titulo-container">
+                <h1>Agendamento</h1>
+            </div>
+
+
+            <form action="#" method="post">
+                <div class="container-inputs input-text">
+                    <input type="text" placeholder="Digite o nome completo">
+                </div>
+
+                <div class="container-inputs inputs-text">
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="container-inputs input-tel">
+                    <input type="tel" placeholder="Telefone: (xx)xxxxx-xxxx">
+                </div>
+
+                <div>
+                    <label for="procedimentoId">Procedimento</label>
+                    <select name="procedimentos" id="procedimentoId">
+                        
+                        <optgroup label="Procedimentos capilar">
+                            <option value="hidratacao-capilar">hidratacao capilar</option>
+                            <option value="corte-de-cabelo">Corte de cabelo</option>
+                            <option value="pintura-do-cabelo">pintura do cabelo</option>
+                        </optgroup>
+
+                        <optgroup label="Procedimentos corporais">
+                            <option value="radiofrequencia">radiofrequência</option>
+                            <option value="depilacao">depilação</option>
+                            <option value="drenagem-linfatica">drenagem linfatica</option>
+                        </optgroup>
+
+                        <optgroup label="Procedimentos faciais">
+                            <option value="botox">botox</option>
+                            <option value="limpeza-pele">limpeza de pele</option>
+                            <option value="nutricao-facial">nutrição facial</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <!-- input onde será mostrado o preço do procedimento salvo no banco de dados -->
+                <div class="container-inputs">
+                    <input type="text">
+                </div>
+
+
+                <div class="container-inputs">
+                    <label for="dataHorarioId">Data e horario:</label>
+                    <select name="dataHorario" id="dataHorarioId">
+                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                    </select>
+
+                </div>
+
+                <button type="submit">Agendar</button>
+
+            </form>
+          </main>
+
+          <footer>
+            <div class="container-footer">
+                <div class="container-links-footer">
+                    <div class="link-contatos">
+                        <h4>Contatos</h4>
+                        <a href=""><i class="fa-solid fa-phone"></i>(11)XXXX-XXXX</a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+                    </div>
+
+                    <div class="link-redes-sociais">
+                        <h4>Redes sociais</h4>
+                        <a href=""><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                        <a href=""><i class="fa-brands fa-instagram"></i>Instagram</a>
+                        <a href=""><i class="fa-brands fa-youtube"></i>Youtube</a>
+                    </div>
+
+                    <div class="container-endereco-footer">
+                        <h4>Endereço</h4>
+                        <p><i class="fa-solid fa-location-dot"></i>Rua Bananas de pijama, 259, White forest - Unova - Sp</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
 </body>
 </html>

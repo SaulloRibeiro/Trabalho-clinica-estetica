@@ -39,7 +39,7 @@
         position: fixed;
         right: -250px;
         top: 0px;
-        transition: left 0.3s ease;
+        transition: right 0.3s ease;
         z-index: 1000;   
         overflow-y: auto;
         overflow-x: hidden;
@@ -87,10 +87,6 @@
     div.container-endereco-footer  p{
         text-align: center;
     }
-
-
-    
-
 
     li#btn-fechar{
         display: block;
