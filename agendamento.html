@@ -34,64 +34,70 @@
                 <h1>Agendamento</h1>
             </div>
 
-
-            <form action="#" method="post">
-                <div class="container-inputs input-text">
-                    <input type="text" placeholder="Digite o nome completo">
+            <div class="container-formulario">
+                <div class="imagem-formulario">
+                    <img src="assets/img/modelo.jpg" alt="">
                 </div>
 
-                <div class="container-inputs inputs-text">
-                    <input type="email" placeholder="Email">
-                </div>
+                <form action="#" method="post">
+                    <div class="container-aux">
+                        <div class="container-inputs input-text">
+                            <input type="text" placeholder="Digite o nome completo">
+                        </div>
 
-                <div class="container-inputs input-tel">
-                    <input type="tel" placeholder="Telefone: (xx)xxxxx-xxxx">
-                </div>
+                        <div class="container-inputs inputs-text">
+                            <input type="email" placeholder="Email">
+                        </div>
 
-                <div>
-                    <label for="procedimentoId">Procedimento</label>
-                    <select name="procedimentos" id="procedimentoId">
-                        
-                        <optgroup label="Procedimentos capilar">
-                            <option value="hidratacao-capilar">hidratacao capilar</option>
-                            <option value="corte-de-cabelo">Corte de cabelo</option>
-                            <option value="pintura-do-cabelo">pintura do cabelo</option>
-                        </optgroup>
+                        <div class="container-inputs input-tel">
+                            <input type="tel" placeholder="Telefone: (xx)xxxxx-xxxx">
+                        </div>
 
-                        <optgroup label="Procedimentos corporais">
-                            <option value="radiofrequencia">radiofrequência</option>
-                            <option value="depilacao">depilação</option>
-                            <option value="drenagem-linfatica">drenagem linfatica</option>
-                        </optgroup>
+                        <div class="container-inputs">
+                            <label for="procedimentoId">Procedimento</label>
+                            <select name="procedimentos" id="procedimentoId">
+                                <optgroup label="Procedimentos capilar">
+                                    <option value="hidratacao-capilar">hidratacao capilar</option>
+                                    <option value="corte-de-cabelo">Corte de cabelo</option>
+                                    <option value="pintura-do-cabelo">pintura do cabelo</option>
+                                </optgroup>
 
-                        <optgroup label="Procedimentos faciais">
-                            <option value="botox">botox</option>
-                            <option value="limpeza-pele">limpeza de pele</option>
-                            <option value="nutricao-facial">nutrição facial</option>
-                        </optgroup>
-                    </select>
-                </div>
-                
-                <!-- input onde será mostrado o preço do procedimento salvo no banco de dados -->
-                <div class="container-inputs">
-                    <input type="text">
-                </div>
+                                <optgroup label="Procedimentos corporais">
+                                    <option value="radiofrequencia">radiofrequência</option>
+                                    <option value="depilacao">depilação</option>
+                                    <option value="drenagem-linfatica">drenagem linfatica</option>
+                                </optgroup>
+
+                                <optgroup label="Procedimentos faciais">
+                                    <option value="botox">botox</option>
+                                    <option value="limpeza-pele">limpeza de pele</option>
+                                    <option value="nutricao-facial">nutrição facial</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    
+                    <!-- input onde será mostrado o preço do procedimento salvo no banco de dados -->
+                        <div class="container-inputs">
+                            <input type="text">
+                        </div>
 
 
-                <div class="container-inputs">
-                    <label for="dataHorarioId">Data e horario:</label>
-                    <select name="dataHorario" id="dataHorarioId">
-                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
-                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
-                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
-                        <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
-                    </select>
+                        <div class="container-inputs">
+                            <label for="dataHorarioId">Data e horario:</label>
+                            <select name="dataHorario" id="dataHorarioId">
+                                <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                                <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                                <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                                <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                            </select>
+                        </div>
 
-                </div>
+                        <button type="submit">Agendar</button>
 
-                <button type="submit">Agendar</button>
-
-            </form>
+                    </div>
+                </form>
+            </div>
+            
           </main>
 
           <footer>
