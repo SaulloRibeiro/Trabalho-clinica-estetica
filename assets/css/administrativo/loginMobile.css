@@ -14,11 +14,10 @@
         text-transform: uppercase;
     }
 
-    form{
+    main{
         width: 100%;
     }
-
-
+    
     .menu-btn-container{
         display: block !important;
         margin-right: 30px;
@@ -51,16 +50,6 @@
         right: 0px;
     }
 
-    div.container-formulario{
-        flex-direction: column;
-        gap: 0px;
-    }
-
-    div.imagem-formulario{
-        margin-top: 30px;
-        align-self: center;
-    }
-
     div.container-links-footer{
         display: flex;
         flex-direction: column;
@@ -91,4 +80,5 @@
         font-size: 25px;
         cursor: pointer;
     }
+
 }
