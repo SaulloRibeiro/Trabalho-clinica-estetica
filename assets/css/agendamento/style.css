@@ -58,7 +58,7 @@ main{
 }
 
 h1{
-
+    font-size: 2.5em;
 }
 
 h1,h4{
@@ -84,6 +84,17 @@ input{
     background-color: transparent;
     border:none ;
 
+}
+
+label{
+    display: inline;
+}
+
+select{
+    padding: 10px;
+    border: 1px solid rgb(182, 178, 178);
+    border-radius: 5px;
+    background-color: transparent;
 }
 
 select, input{
@@ -148,10 +159,6 @@ div.container-inputs{
     border: 1px solid rgb(182, 178, 178);
 }
 
-div.input-text{
-
-}
-
 div.input-tel{
     width: 80%;
 }
@@ -183,4 +190,9 @@ div.container-endereco-footer{
 li#btn-fechar{
     display: none;
 }
+
+div#preco-procedimento{
+    width: 35%;
+}
+
 

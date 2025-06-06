@@ -53,7 +53,7 @@
                             <input type="tel" placeholder="Telefone: (xx)xxxxx-xxxx">
                         </div>
 
-                        <div class="container-inputs">
+                        <div class="container-select">
                             <label for="procedimentoId">Procedimento</label>
                             <select name="procedimentos" id="procedimentoId">
                                 <optgroup label="Procedimentos capilar">
@@ -77,12 +77,12 @@
                         </div>
                     
                     <!-- input onde será mostrado o preço do procedimento salvo no banco de dados -->
-                        <div class="container-inputs">
-                            <input type="text">
+                        <div class="container-inputs" id="preco-procedimento">
+                            <input id="preco-procedimento-input" type="text" disabled placeholder="Preço">
                         </div>
 
 
-                        <div class="container-inputs">
+                        <div class="container-select">
                             <label for="dataHorarioId">Data e horario:</label>
                             <select name="dataHorario" id="dataHorarioId">
                                 <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
