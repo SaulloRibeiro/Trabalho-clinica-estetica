@@ -1,0 +1,95 @@
+@media (max-width: 992px) {
+
+    ul{
+        margin-top: 30px;
+        width: 250px;
+        display: block;
+    }
+    li{
+        width: 100%;
+    }
+
+    a{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    form{
+        width: 100%;
+    }
+
+
+    .menu-btn-container{
+        display: block !important;
+        margin-right: 30px;
+    }
+
+    .menu-btn-container i{
+        margin-right: 30px;
+        font-size: 30px;
+        text-align: center;
+        color: black;
+        cursor: pointer;
+    }
+
+    nav.menu{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 250px;
+        position: fixed;
+        right: -250px;
+        top: 0px;
+        transition: right 0.3s ease;
+        z-index: 1000;   
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: white;
+    }
+
+    nav.menu.ativado{
+        right: 0px;
+    }
+
+    div.container-formulario{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    div.imagem-formulario{
+        margin-top: 30px;
+        align-self: center;
+    }
+
+    div.container-links-footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.container-links-footer a{
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    div.link-contatos, div.link-redes-sociais{
+        width: 100%;
+    }
+
+    div.container-endereco-footer{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;   
+    }
+
+    div.container-endereco-footer  p{
+        text-align: center;
+    }
+
+    li#btn-fechar{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+}
