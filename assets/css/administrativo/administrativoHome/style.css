@@ -7,12 +7,31 @@
     box-sizing: border-box;
 }
 
+body,html{
+    height: 100%;
+}
+
+
+main{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 a{
-   width: 20%;
+   width: 40%;
    display: block;
-   background-color: aqua;
    margin-bottom: 30px;
    text-decoration: none;
+}
+
+img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 10px;
 }
 
 p{
@@ -22,8 +41,12 @@ p{
 .pagina{
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-img{
+    width: 80%;
     margin: auto;
 }
