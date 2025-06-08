@@ -22,13 +22,26 @@ main{
 
 a{
    width: 40%;
-   display: block;
    margin-bottom: 30px;
+   padding: 10px;
    text-decoration: none;
+   display: block;
+   border: 1px solid lightgray;
+   border-radius: 10px;
+   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
+}
+
+a:hover{
+    background-color: pink;
+    transform: scale(1.1);
+}
+
+a:hover p{
+    color: white;
 }
 
 img{
-    width: 80%;
+    width: 15rem;
     display: block;
     margin: auto;
     padding: 10px;
@@ -36,6 +49,9 @@ img{
 
 p{
     text-align: center;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1em;
+    color: crimson;
 }
 
 .pagina{
@@ -49,4 +65,21 @@ p{
 .container-img{
     width: 80%;
     margin: auto;
+}
+
+
+
+@media (max-width: 762px) {
+
+    main{
+        flex-direction: column;
+    }
+
+    img{
+        width: 15rem;
+    }
+
+    a{
+        width: 100%;
+    }
 }
