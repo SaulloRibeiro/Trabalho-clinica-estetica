@@ -95,7 +95,7 @@ h4{
 div.logo-empresa{
     width: 250px;
     height: 100%;
-    background-image: url(../../img/logo-empresa.png);
+    background-image: url(../../../img/logo-empresa.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
