@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    padding: 30px;
+}
+
+form{
+    margin-top: 10px;
+}
+
+input{
+    padding: 10px;
+}
+
+input,select{
+    outline: 0;
+    padding: 10px;
+}
+
+button{
+    padding: 10px;
+}
+
+.pagina{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-titulo{
+    margin-top: 30px;
+}

@@ -23,6 +23,7 @@ main{
 a{
    width: 40%;
    margin-bottom: 30px;
+   margin-left: 20px;
    padding: 10px;
    text-decoration: none;
    display: block;
@@ -34,6 +35,7 @@ a{
 a:hover{
     background-color: pink;
     transform: scale(1.1);
+
 }
 
 a:hover p{
