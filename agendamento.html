@@ -42,16 +42,27 @@
 
                 <form action="#" method="post">
                     <div class="container-aux">
-                        <div class="container-inputs input-text">
-                            <input type="text" placeholder="Digite o nome completo">
+
+                        <div class="teste">
+                            <p class="msg-error">error digite um nome valido</p>
+                            <div class="container-inputs input-text">
+                                <input type="text" id="nomeId" placeholder="Digite o nome completo" required>
+                            </div>
                         </div>
 
-                        <div class="container-inputs inputs-text">
-                            <input type="email" placeholder="Email">
+                        <div class="teste">
+                            <p class="msg-error">Digite um email valido</p>
+                            <div class="container-inputs inputs-text error">
+                                <input type="email" id="emailId" placeholder="Email" required>
+                            </div>
                         </div>
 
-                        <div class="container-inputs input-tel">
-                            <input type="tel" placeholder="Telefone: (xx)xxxxx-xxxx">
+                        <div class="teste">
+                            <p class="msg-error">Digite um numero de telefone válido</p>
+                            <div class="container-inputs input-tel">
+                                <input type="tel" id="telefoneId" placeholder="Telefone: (xx)xxxxx-xxxx" required oninput="limparInput(this)">
+                                
+                            </div>
                         </div>
 
                         <div class="container-select">
@@ -98,7 +109,7 @@
                     </div>
                 </form>
             </div>
-            
+            <button onclick="verificarInputNome(); verificarInputEmail(); verificarInputTelefone()"></button>
           </main>
 
           <footer>
@@ -127,5 +138,6 @@
         </footer>
     </div>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/agendamentoFormulario.js"></script>
 </body>
 </html>

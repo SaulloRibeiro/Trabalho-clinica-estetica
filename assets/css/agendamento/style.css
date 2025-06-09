@@ -152,6 +152,12 @@ div.container-aux{
 }
 
 
+p.msg-error{
+    color: red;
+    font-size: 0.8em;
+    display: none;
+}
+
 div.container-inputs{
     width: 100%;
     display: flex;
