@@ -13,31 +13,153 @@ html,body{
     height: 100%;
 }
 
-main{
-    background-color: gray;
+h1{
+    text-align: center;
+    margin-top: 30px;
 }
 
 form{
-    background-color: burlywood;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
+input{
+    width: 30%;
+    border: 0.3px solid lightgray;
+    
+}
 
+select{
+    border: 0.3px solid lightgray;
+}
 
+input, select{
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: 0;
+}
 
+button{
+    padding: 10px;
+    width: 15%;
+}
 
-
-
-
-
+span{
+    margin-right: 10px;
+    text-align: center;
+}
 
 
 .pagina{
     width: 100%;
     height: 100%;
-    background-color: aqua;
 }
 
 .container{
-    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+
 }
+
+.container-input{
+    align-self: center;
+    width: 60%;
+    padding: 20px;
+}
+
+.btn-add{
+
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+}
+
+.container-listagem-procedimento{
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid lightgrey;
+    width: 60%;
+}
+
+.procedimento{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.dados{
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+
+.btn-container{
+    width: 25%;
+}
+
+.btn-remover{
+    width: 100%;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+.btn-enviar{
+    margin: auto;
+    width: 60%;
+    margin-bottom: 30px;
+    background-color: pink;
+    border:0px
+}
+
+
+#horarioId{
+    width: 20%;
+}
+
+@media (max-width: 762px) {
+    
+    label{
+        display: block;
+    }
+
+    input{
+        width: 80%;
+    }
+
+    .container{
+        align-items: center;
+    }
+
+    .container-input{
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    #horarioId{
+        width: 40%;
+    }
+    
+
+
+
+
+}
+
+
+
+
+
+

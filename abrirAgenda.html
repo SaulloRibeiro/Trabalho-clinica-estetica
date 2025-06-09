@@ -10,101 +10,149 @@
     <div class="pagina">
 
         <main>
-            <form action="#" method="post">
-                <label for="diaId">Escolha o dia para abrir agendamentos</label>
-                <input type="date" name="#" id="diaID">
+
+            <h1>Abertura de agendamentos</h1>
 
                 <div class="container">
-                    <label for="procedimentoId">selecione o procedimento: </label>  
-                        <select name="procedimentos" id="procedimentoId">
-                            <optgroup label="Procedimentos capilar">
-                                <option value="hidratacao-capilar">hidratacao capilar</option>
-                                <option value="corte-de-cabelo">Corte de cabelo</option>
-                                <option value="pintura-do-cabelo">pintura do cabelo</option>
-                            </optgroup>
+                    <div class="container-input">
+                        <label for="diaId">Escolha o dia para abrir agendamentos</label>
+                        <input type="date" name="#" id="diaId">
+                    </div>
+                    <div class="container-input">
+                        <label for="procedimentoId">selecione o procedimento: </label>  
+                            <select name="procedimentos" id="procedimentoId">
+                                <optgroup label="Procedimentos capilar">
+                                    <option value="hidratacao-capilar">hidratacao capilar</option>
+                                    <option value="corte-de-cabelo">Corte de cabelo</option>
+                                    <option value="pintura-do-cabelo">pintura do cabelo</option>
+                                </optgroup>
+    
+                                <optgroup label="Procedimentos corporais">
+                                    <option value="radiofrequencia">radiofrequência</option>
+                                    <option value="depilacao">depilação</option>
+                                    <option value="drenagem-linfatica">drenagem linfatica</option>
+                                </optgroup>
+    
+                                <optgroup label="Procedimentos faciais">
+                                    <option value="botox">botox</option>
+                                    <option value="limpeza-pele">limpeza de pele</option>
+                                    <option value="nutricao-facial">nutrição facial</option>
+                                </optgroup>
+                            </select>
+                    </div>
 
-                            <optgroup label="Procedimentos corporais">
-                                <option value="radiofrequencia">radiofrequência</option>
-                                <option value="depilacao">depilação</option>
-                                <option value="drenagem-linfatica">drenagem linfatica</option>
-                            </optgroup>
-
-                            <optgroup label="Procedimentos faciais">
-                                <option value="botox">botox</option>
-                                <option value="limpeza-pele">limpeza de pele</option>
-                                <option value="nutricao-facial">nutrição facial</option>
-                            </optgroup>
-                        </select>
-
-                    <label for="horarioId">Informe o horario</label>
-                    <input type="time" name="#" id="horarioId">
-
-                    <button>Adicionar</button>
-            
+                    <div class="container-input">
+                        <label for="horarioId">Informe o horario</label>
+                        <input type="time" name="#" id="horarioId">        
+                        <button class="btn-add" onclick="addProcedimento()">Adicionar</button>   
+                    </div>
+         
                 </div>
 
-                <div class="container-listagem-procedimento">
+                <div class="container-listagem-procedimento" id="container-listagem-procedimentoId">
                     <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
+                        <div class="dados">
+                            <span>Corte de cabelo</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
                     </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                    <div class="procedimento">
-                        <span>Corte de cabelo</span>
-                        <span>10/02/2025</span>
-                        <span>10:00</span>
-                        <button>remover</button>
-                    </div>
-                </div>
 
-                <button type="submit">Salvar</button>
-            </form>
+                    <!-- <div class="procedimento">
+                        <div class="dados">
+                            <span>hidratacao capilar</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+
+                    <div class="procedimento">
+                        <div class="dados">
+                            <span>pintura do cabelo</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+
+                    <div class="procedimento">
+                        <div class="dados">
+                            <span>radiofrequência</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+
+                    <div class="procedimento">
+                        <div class="dados">
+                            <span>depilação</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+                    <div class="procedimento">
+                        <div class="dados">
+                            <span>drenagem linfatica</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+                    <div class="procedimento">
+                        <div class="dados">
+                            <span>limpeza de pele</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+
+                    <div class="procedimento">
+                        <div class="dados">
+                            <span>nutrição facial</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+
+                    <div class="procedimento">
+                        <div class="dados">
+                            <span>botox</span>
+                            <span>10/02/2025</span>
+                            <span>10:00</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-remover">remover</button>
+                        </div>
+                    </div>
+                </div> -->
+
+                <button class="btn-enviar" type="submit">Salvar</button>
 
         </main>
 
     </div>
+    <script src="assets/js/listagem.js"></script>
 </body>
 </html>
