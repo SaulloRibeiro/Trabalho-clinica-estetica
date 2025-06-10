@@ -44,24 +44,23 @@
                     <div class="container-aux">
 
                         <div class="teste">
-                            <p class="msg-error">error digite um nome valido</p>
+                            <p class="msg-error">digite um nome valido</p>
                             <div class="container-inputs input-text">
-                                <input type="text" id="nomeId" placeholder="Digite o nome completo" required>
+                                <input type="text" id="nomeId" placeholder="Digite o nome completo" required onblur="verificarInputNome()">
                             </div>
                         </div>
 
                         <div class="teste">
                             <p class="msg-error">Digite um email valido</p>
                             <div class="container-inputs inputs-text error">
-                                <input type="email" id="emailId" placeholder="Email" required>
+                                <input type="email" id="emailId" placeholder="Email" required onblur="verificarInputEmail()">
                             </div>
                         </div>
 
                         <div class="teste">
                             <p class="msg-error">Digite um numero de telefone válido</p>
                             <div class="container-inputs input-tel">
-                                <input type="tel" id="telefoneId" placeholder="Telefone: (xx)xxxxx-xxxx" required oninput="limparInput(this)">
-                                
+                                <input type="tel" id="telefoneId" placeholder="Telefone: (xx)xxxxx-xxxx" required oninput="limparInput(this); mascaraTelefone(this)" onblur="verificarInputTelefone()" maxlength=15>
                             </div>
                         </div>
 
@@ -139,5 +138,6 @@
     </div>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/agendamentoFormulario.js"></script>
+    <script src="assets/js/mascaras.js"></script>
 </body>
 </html>

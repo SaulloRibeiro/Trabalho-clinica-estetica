@@ -20,8 +20,10 @@ function verificarInputNome(){
 function verificarInputEmail(){
     let email = campoEmail.value;
     let quantidadeCaracteresSemEspacosAntesDepoisTexto = email.trim().length;
+    let emailFormatado = email.trim();
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if(quantidadeCaracteresSemEspacosAntesDepoisTexto === 0){
+    if(quantidadeCaracteresSemEspacosAntesDepoisTexto === 0 || !regex.test(emailFormatado)){
         campoMsgError[1].style.display = "block";
         return;
     }
