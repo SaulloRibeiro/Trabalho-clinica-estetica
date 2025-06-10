@@ -126,6 +126,15 @@ div.container-input{
 
 }
 
+p.mgs-erro{
+    background-color: rgb(250, 173, 173);
+    color: rgb(110, 2, 2);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+
 div.container-input i{
     font-size: 1rem;
     color: rgb(182, 178, 178);
