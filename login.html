@@ -33,18 +33,18 @@
 
         <main>
 
-            <form action="#" method="post" autocomplete="off">
+            <form action="classes/services/verificarLoginService.php" method="post" autocomplete="off">
                 <p class="mgs-erro">Usuario ou senha inválidos</p>
                 <div class="auxiliadora">
                     <div class="container-input">
-                        <input type="email" required placeholder="Email">
+                        <input type="email" name="userName" required placeholder="Email">
                         <i class="fa-solid fa-user"></i>
                     </div>
                 </div>
 
                 <div class="auxiliadora">
                     <div class="container-input">
-                        <input id="senhaId" type="password" required placeholder="Senha">
+                        <input id="senhaId" type="password" name="password" required placeholder="Senha">
                         <i id="olho" class="fa-regular fa-eye-slash" onclick="mostrarOuEsconderSenha()"></i>
                     </div>
                 </div>
