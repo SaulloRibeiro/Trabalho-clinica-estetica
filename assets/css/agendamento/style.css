@@ -202,7 +202,13 @@ li#btn-fechar{
 }
 
 div#preco-procedimento{
-    width: 35%;
+    width: 45%;
 }
+
+#preco-procedimento-input{
+    width: 100% !important;
+    text-align: center;
+}
+
 
 

@@ -1,3 +1,10 @@
+<?php
+
+include_once(__DIR__."/classes/view/ProcedimentoView.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -89,7 +96,12 @@
                     
                     <!-- input onde será mostrado o preço do procedimento salvo no banco de dados -->
                         <div class="container-inputs" id="preco-procedimento">
-                            <input id="preco-procedimento-input" type="text" disabled placeholder="Preço">
+                            <!-- <?php
+                                $procedimentoPreco = new ProcedimentoView();
+                                $procedimentoPreco->mostrarPreco("hidratacao capilar");
+                            ?> -->
+                            <input id="preco-procedimento-input" type="text" disabled placeholder="Preço" 
+                            value="R$120,00">
                         </div>
 
 

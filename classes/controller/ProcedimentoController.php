@@ -40,8 +40,13 @@ class ProcedimentoController{
 
     }
 
-    public function listarProcedimentosFacial(){
-
+    public function consultarPrecoProcedimento($procedimento){
+        $sql = $this->ConexaoBancoDados->prepare("SELECT preco_procedimento FROM procedimentos_view 
+        WHERE nome_procedimento = :Procedimento");
+        $sql->bindValue(":Procedimento", $procedimento);
+        $sql->execute();
+        $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+        return number_format($resultado['preco_procedimento'], 2,',','.');
     }
 
 }

@@ -26,6 +26,21 @@ class ProcedimentoView {
         }
     }
 
+    public function mostrarPreco($procedimento){
+        try {
+            $procedimentoController = new ProcedimentoController();
+            $preco = $procedimentoController->consultarPrecoProcedimento($procedimento);
+
+            echo "<input id='preco-procedimento-input' type='text' disabled placeholder='Preço' 
+            value='R$ {$preco}'>";
+        } 
+        catch (Exception $e) {
+            echo "Erro ao buscar preco: {$e->getMessage()}";
+        }
+    }
+
+
+
 }
 
 
