@@ -6,13 +6,15 @@ class Procedimento{
     private $Valor;
     private $Descricao;
     private $NomeImgCorrespondente;
+    private $Categoria;
 
-    public function __construct($id = null, $nome, $valor, $descricao, $nomeImgCorrespondente){
+    public function __construct($id = null, $nome, $valor, $descricao, $nomeImgCorrespondente, $categoria){
         $this->Id = $id;
         $this->Nome = $nome;
         $this->Valor = $valor;
         $this->Descricao = $descricao;
         $this->NomeImgCorrespondente = $nomeImgCorrespondente;
+        $this->Categoria = $categoria;
     }
 
     public function getId(){
@@ -49,6 +51,14 @@ class Procedimento{
 
     public function setNomeImgCorrespondente($nomeImgCorrespondente){
         $this->NomeImgCorrespondente = $nomeImgCorrespondente; 
+    }
+
+    public function getCategoria(){
+        return $this->Categoria;
+    }
+
+    public function setCategoria($categoria){
+        $this->Categoria = $categoria;
     }
 
 }

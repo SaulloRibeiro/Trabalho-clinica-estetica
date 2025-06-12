@@ -8,11 +8,11 @@ class ProcedimentoView{
 
 
 
-    public function criarCardsDosProcedimentos(){
+    public function criarCardsDosProcedimentos($categoria){
         try{
             $procedimentoController = new ProcedimentoController();
             
-            foreach($procedimentoController->listarProcedimentos() as $procedimento){
+            foreach($procedimentoController->listarProcedimentos($categoria) as $procedimento){
 
                 echo "";
 

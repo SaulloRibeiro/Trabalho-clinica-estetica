@@ -1,7 +1,7 @@
 <?php
 
 include_once('DBconexao.php');
-include_once('../models/Procedimento.php');
+include_once(__DIR__. '/../models/Procedimento.php');
 
 class ProcedimentoController{
 
@@ -17,10 +17,11 @@ class ProcedimentoController{
         }
     }
 
-    public function listarProcedimentos(){
+    public function listarProcedimentos($tipoProcedimento){
         $listaProcedimetos = [];
 
-        $sql = $this->ConexaoBancoDados->prepare("SELECT * FROM procedimentos");
+        $sql = $this->ConexaoBancoDados->prepare("SELECT * FROM procedimentos_view WHERE descricao_categoria = :categoria");
+        $sql->bindValue(":categoria", $tipoProcedimento);
         $sql->execute();
 
         while($resultado = $sql->fetch(PDO::FETCH_ASSOC)){
@@ -29,12 +30,17 @@ class ProcedimentoController{
             $precoProcedimento = $resultado['preco_procedimento'];
             $descricaoProcedimento = $resultado['descricao'];
             $nomeImgProcedimento = $resultado['nome_img_correspondente'];
-            $procedimento = new Procedimento($idProcedimento, $nomeProcedimento, $precoProcedimento, $descricaoProcedimento, $nomeImgProcedimento);
+            $categoriaProcedimento = $resultado['descricao_categoria'];
+            $procedimento = new Procedimento($idProcedimento, $nomeProcedimento, $precoProcedimento, $descricaoProcedimento, $nomeImgProcedimento, $categoriaProcedimento);
             array_push($listaProcedimetos, $procedimento);
         }
 
         $this->ConexaoBancoDados = null;
         return $listaProcedimetos;
+
+    }
+
+    public function listarProcedimentosFacial(){
 
     }
 
