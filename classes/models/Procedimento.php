@@ -8,7 +8,7 @@ class Procedimento{
     private $NomeImgCorrespondente;
     private $Categoria;
 
-    public function __construct($id = null, $nome, $valor, $descricao, $nomeImgCorrespondente, $categoria){
+    public function __construct($nome, $valor, $descricao, $nomeImgCorrespondente, $categoria,$id = null){
         $this->Id = $id;
         $this->Nome = $nome;
         $this->Valor = $valor;

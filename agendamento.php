@@ -4,7 +4,6 @@ include_once(__DIR__."/classes/view/ProcedimentoView.php");
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -75,33 +74,28 @@ include_once(__DIR__."/classes/view/ProcedimentoView.php");
                             <label for="procedimentoId">Procedimento</label>
                             <select name="procedimentos" id="procedimentoId">
                                 <optgroup label="Procedimentos capilar">
-                                    <option value="hidratacao-capilar">hidratacao capilar</option>
-                                    <option value="corte-de-cabelo">Corte de cabelo</option>
-                                    <option value="pintura-do-cabelo">pintura do cabelo</option>
+                                    <option value="Hidratacao capilar">hidratacao capilar</option>
+                                    <option value="Corte de cabelo">Corte de cabelo</option>
+                                    <option value="Pintura do cabelo">pintura do cabelo</option>
                                 </optgroup>
 
                                 <optgroup label="Procedimentos corporais">
-                                    <option value="radiofrequencia">radiofrequência</option>
-                                    <option value="depilacao">depilação</option>
-                                    <option value="drenagem-linfatica">drenagem linfatica</option>
+                                    <option value="Radiofrequencia">radiofrequência</option>
+                                    <option value="Depilacao">depilação</option>
+                                    <option value="Drenagem linfatica">drenagem linfatica</option>
                                 </optgroup>
 
                                 <optgroup label="Procedimentos faciais">
-                                    <option value="botox">botox</option>
-                                    <option value="limpeza-pele">limpeza de pele</option>
-                                    <option value="nutricao-facial">nutrição facial</option>
+                                    <option value="Botox">botox</option>
+                                    <option value="Limpeza pele">limpeza de pele</option>
+                                    <option value="Nutricao facial">nutrição facial</option>
                                 </optgroup>
                             </select>
                         </div>
                     
                     <!-- input onde será mostrado o preço do procedimento salvo no banco de dados -->
                         <div class="container-inputs" id="preco-procedimento">
-                            <!-- <?php
-                                $procedimentoPreco = new ProcedimentoView();
-                                $procedimentoPreco->mostrarPreco("hidratacao capilar");
-                            ?> -->
-                            <input id="preco-procedimento-input" type="text" disabled placeholder="Preço" 
-                            value="R$120,00">
+                            <input id="preco-procedimento-input" type="text" disabled placeholder="Preço">
                         </div>
 
 
@@ -150,5 +144,6 @@ include_once(__DIR__."/classes/view/ProcedimentoView.php");
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/agendamentoFormulario.js"></script>
     <script src="assets/js/mascaras.js"></script>
+    <script src="assets/js/mandarPrecoParaPhp.js"></script>
 </body>
 </html>

@@ -40,7 +40,7 @@ class ProcedimentoController{
 
     }
 
-    public function consultarPrecoProcedimento($procedimento){
+    public function consultarPrecoProcedimento($procedimento=null){
         $sql = $this->ConexaoBancoDados->prepare("SELECT preco_procedimento FROM procedimentos_view 
         WHERE nome_procedimento = :Procedimento");
         $sql->bindValue(":Procedimento", $procedimento);
