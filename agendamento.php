@@ -46,27 +46,27 @@ include_once(__DIR__."/classes/view/ProcedimentoView.php");
                     <img src="assets/img/modelo.jpg" alt="">
                 </div>
 
-                <form action="#" method="post">
+                <form action="classes/services/agendamentoService.php" method="post">
                     <div class="container-aux">
 
                         <div class="auxiliar">
                             <p class="msg-error">digite um nome valido</p>
                             <div class="container-inputs input-text">
-                                <input type="text" id="nomeId" placeholder="Digite o nome completo" required onblur="verificarInputNome()">
+                                <input type="text" name="nome" id="nomeId" placeholder="Digite o nome completo" required onblur="verificarInputNome()">
                             </div>
                         </div>
 
                         <div class="auxiliar">
                             <p class="msg-error">Digite um email valido</p>
                             <div class="container-inputs inputs-text error">
-                                <input type="email" id="emailId" placeholder="Email" required onblur="verificarInputEmail()">
+                                <input type="email" id="emailId" name="email" placeholder="Email" required onblur="verificarInputEmail()">
                             </div>
                         </div>
 
                         <div class="auxiliar">
                             <p class="msg-error">Digite um numero de telefone válido</p>
                             <div class="container-inputs input-tel">
-                                <input type="tel" id="telefoneId" placeholder="Telefone: (xx)xxxxx-xxxx" required oninput="limparInput(this); mascaraTelefone(this)" onblur="verificarInputTelefone()" maxlength=15>
+                                <input type="tel" id="telefoneId" name="telefone" placeholder="Telefone: (xx)xxxxx-xxxx" required oninput="limparInput(this); mascaraTelefone(this)" onblur="verificarInputTelefone()" maxlength=15>
                             </div>
                         </div>
 

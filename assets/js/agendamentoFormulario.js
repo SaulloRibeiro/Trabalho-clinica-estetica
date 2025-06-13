@@ -29,6 +29,7 @@ function verificarInputEmail(){
     }
 
     campoMsgError[1].style.display = "none";
+
 }
 
 function verificarInputTelefone(){

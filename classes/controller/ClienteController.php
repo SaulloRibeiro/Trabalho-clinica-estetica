@@ -37,6 +37,11 @@ class ClienteController{
     }
 
     public function getIdCliente($email){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+        
         $sql = $this->ConexaoBancoDados->prepare("SELECT id_cliente FROM clientes WHERE
         email_cliente = :email");
         $sql->bindValue(":email", $email);
