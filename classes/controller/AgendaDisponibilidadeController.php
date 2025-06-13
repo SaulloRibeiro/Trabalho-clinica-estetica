@@ -37,7 +37,14 @@ class AgendaDisponibilidadeController{
 
         $this->ConexaoBancoDados = null;
         return $disponibilidades;
+    }
 
+    public function deletarDisponibilidade($procedimentoId, $horarioDisponivel){
+        $sql = $this->ConexaoBancoDados->prepare("DELETE FROM agendaDisponibilidades WHERE
+        procedimento_id = :procedimentoId and horario_disponivel = :horario");
+        $sql->bindValue(":procedimentoId", $procedimentoId);
+        $sql->bindValue(":horario", $horarioDisponivel);
+        $sql->execute();
     }
 
 }

@@ -49,6 +49,14 @@ class ProcedimentoController{
         return number_format($resultado['preco_procedimento'], 2,',','.');
     }
 
+    public function getIDProcedimento($nomeProcedimento){
+        $sql = $this->ConexaoBancoDados->prepare("SELECT id_procedimento FROM procedimentos WHERE
+        nome_procedimento = :nome");
+        $sql->bindValue(":nome", $nomeProcedimento);
+        $sql->execute();
+        $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+        return $resultado['id_procedimento'];
+    }
 }
 
 
