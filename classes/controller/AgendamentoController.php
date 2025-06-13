@@ -17,6 +17,11 @@ class AgendamentoController{
     }
 
     public function inserirAgendamento($idCliente, $data, $horario, $nomeProcedimento){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+        
         try{
             $sql = $this->ConexaoBancoDados->prepare("INSERT INTO agendamentos (id_agendamento,cliente_id, procedimento_id, data_agendamento,
             horario_agendado) VALUES (DEFAULT, :cliente, :nomeProcedimento, :dataAgendamento, :horario)");

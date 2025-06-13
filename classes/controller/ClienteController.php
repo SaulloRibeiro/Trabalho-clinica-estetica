@@ -20,6 +20,11 @@ class ClienteController{
     }
 
     public function inserirCliente(Cliente $cliente){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+
         try{
             $sql = $this->ConexaoBancoDados->prepare("INSERT INTO clientes (id_cliente, nome_cliente, telefone_cliente, email_cliente)
             VALUES (DEFAULT, :nome, :telefone, :email)");

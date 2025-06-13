@@ -18,8 +18,12 @@ class ProcedimentoController{
     }
 
     public function listarProcedimentos($tipoProcedimento){
-        $listaProcedimetos = [];
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
 
+        $listaProcedimetos = [];
         $sql = $this->ConexaoBancoDados->prepare("SELECT * FROM procedimentos_view WHERE descricao_categoria = :categoria");
         $sql->bindValue(":categoria", $tipoProcedimento);
         $sql->execute();
@@ -41,6 +45,11 @@ class ProcedimentoController{
     }
 
     public function consultarPrecoProcedimento($procedimento=null){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+
         $sql = $this->ConexaoBancoDados->prepare("SELECT preco_procedimento FROM procedimentos_view 
         WHERE nome_procedimento = :Procedimento");
         $sql->bindValue(":Procedimento", $procedimento);
@@ -50,6 +59,11 @@ class ProcedimentoController{
     }
 
     public function getIDProcedimento($nomeProcedimento){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+
         $sql = $this->ConexaoBancoDados->prepare("SELECT id_procedimento FROM procedimentos WHERE
         nome_procedimento = :nome");
         $sql->bindValue(":nome", $nomeProcedimento);

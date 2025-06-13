@@ -19,6 +19,11 @@ class UsuarioController{
     }
 
     public function UsuarioESenhaEstaCorreto(Usuario $usuario){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+        
         $sql = $this->ConexaoBancoDados->prepare("SELECT senha FROM usuarios WHERE email = :nomeUsuario");
         $sql->bindValue(':nomeUsuario', $usuario->getNomeUsuario());
         $sql->execute();

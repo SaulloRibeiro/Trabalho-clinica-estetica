@@ -16,27 +16,27 @@
                 <div class="container">
                     <div class="container-input">
                         <label for="diaId">Escolha o dia para abrir agendamentos</label>
-                        <input type="date" name="#" id="diaId">
+                        <input type="date" name="data" id="diaId">
                     </div>
                     <div class="container-input">
                         <label for="procedimentoId">selecione o procedimento: </label>  
-                            <select name="procedimentos" id="procedimentoId">
+                            <select name="procedimentos" id="procedimentoId" onchange="validarData()">
                                 <optgroup label="Procedimentos capilar">
-                                    <option value="hidratacao-capilar">hidratacao capilar</option>
-                                    <option value="corte-de-cabelo">Corte de cabelo</option>
-                                    <option value="pintura-do-cabelo">pintura do cabelo</option>
+                                    <option value="Hidratacao capilar">hidratacao capilar</option>
+                                    <option value="Corte de cabelo">Corte de cabelo</option>
+                                    <option value="Pintura do cabelo">pintura do cabelo</option>
                                 </optgroup>
     
                                 <optgroup label="Procedimentos corporais">
-                                    <option value="radiofrequencia">radiofrequência</option>
-                                    <option value="depilacao">depilação</option>
-                                    <option value="drenagem-linfatica">drenagem linfatica</option>
+                                    <option value="Radiofrequencia">radiofrequência</option>
+                                    <option value="Depilacao">depilação</option>
+                                    <option value="Drenagem linfatica">drenagem linfatica</option>
                                 </optgroup>
     
                                 <optgroup label="Procedimentos faciais">
-                                    <option value="botox">botox</option>
-                                    <option value="limpeza-pele">limpeza de pele</option>
-                                    <option value="nutricao-facial">nutrição facial</option>
+                                    <option value="Botox">botox</option>
+                                    <option value="Limpeza pele">limpeza de pele</option>
+                                    <option value="Nutricao facial">nutrição facial</option>
                                 </optgroup>
                             </select>
                     </div>
@@ -49,7 +49,7 @@
          
                 </div>
 
-                <form action="#" method="get">
+                <form action="classes/services/criarAgendaServices.php" method="get">
                     <div class="container-listagem-procedimento" id="container-listagem-procedimentoId"></div> 
                     <button class="btn-enviar" type="submit">Salvar</button>
                 </form>

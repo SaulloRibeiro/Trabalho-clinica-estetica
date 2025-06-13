@@ -4,13 +4,13 @@ class AgendaDisponibilidade{
     private $Id;
     private $Data;
     private $Horario;
-    private $NomeProcedimento;
+    private $ProcedimentoId;
 
-    public function __construct($data, $horario, $nomeProcedimento,$id=null){
+    public function __construct($data, $horario, $procedimentoId,$id=null){
         $this->Id = $id;
         $this->Data = $data;
         $this->Horario = $horario;
-        $this->NomeProcedimento = $nomeProcedimento;
+        $this->ProcedimentoId = $procedimentoId;
     }
 
     public function getId(){
@@ -38,12 +38,12 @@ class AgendaDisponibilidade{
         $this->Horario = $horario;
     }
 
-    public function getNomeProcedimento(){
-        return $this->NomeProcedimento;
+    public function getProcedimentoId(){
+        return $this->ProcedimentoId;
     }
 
-    public function setProcedimento($nomeProcedimento){
-        $this->NomeProcedimento = $nomeProcedimento;
+    public function setProcedimentoId($procedimentoId){
+        $this->ProcedimentoId = $procedimentoId;
     }
 
 }

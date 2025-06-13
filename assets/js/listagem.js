@@ -5,6 +5,24 @@ const containerDaListagemProcedimento = document.getElementById("container-lista
 
 let contador = 0;
 
+
+function validarData(){
+    dataSelecionada = dataComponente.value;
+
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+
+    const dataSelecionadaObjeto = new Date(dataSelecionada);
+    selecionada.setHours(0, 0, 0, 0);
+
+    if(dataSelecionadaObjeto <= hoje){
+        alert("Data invalida! Não é possível abrir agenda para dias passados ou dia atual");
+        return;
+    }
+
+}
+
+
 function addProcedimento(){
     let dataSelecionada = dataComponente.value;
     let procedimentoSelecionado = procedimentoComponente.value;

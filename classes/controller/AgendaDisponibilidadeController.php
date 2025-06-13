@@ -19,7 +19,37 @@ class AgendaDisponibilidadeController{
 
     }
 
+    public function inserirDisponibilidade($disponibilidade){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+
+        try{
+            $sql = $this->ConexaoBancoDados->prepare("INSERT INTO agendadisponibilidades 
+            (id_agendaDisponibilidade, data_disponivel, horario_disponivel, procedimento_id)
+            VALUES (DEFAULT, :dataDisponivel, :horarioDisponivel, :procedimentoId)");
+            $sql->bindValue(":dataDisponivel", $disponibilidade->getData());
+            $sql->bindValue(":horarioDisponivel", $disponibilidade->getHorario());
+            $sql->bindValue(":procedimentoId", $disponibilidade->getProcedimentoId());
+            $sql->execute();
+        }
+
+        catch(Exception $e){
+            throw new Exception("Erro em inserir agenda disponibilidade no banco de dados: ${$e->getMessage()}");
+        }
+        finally{
+            $this->ConexaoBancoDados = null;
+        }
+
+    }
+
+
     public function consultarDisponibilidade($procedimento){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
         $disponibilidades = [];
         $sql = $this->ConexaoBancoDados->prepare("SELECT * FROM agendadisponibilidades_view WHERE
         nome_procedimento = :procedimento");
@@ -40,6 +70,11 @@ class AgendaDisponibilidadeController{
     }
 
     public function deletarDisponibilidade($procedimentoId, $horarioDisponivel){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+        
         $sql = $this->ConexaoBancoDados->prepare("DELETE FROM agendaDisponibilidades WHERE
         procedimento_id = :procedimentoId and horario_disponivel = :horario");
         $sql->bindValue(":procedimentoId", $procedimentoId);
