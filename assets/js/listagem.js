@@ -5,28 +5,44 @@ const containerDaListagemProcedimento = document.getElementById("container-lista
 
 let contador = 0;
 
-
-function validarData(){
-    dataSelecionada = dataComponente.value;
-
-    const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0);
-
-    const dataSelecionadaObjeto = new Date(dataSelecionada);
-    selecionada.setHours(0, 0, 0, 0);
-
-    if(dataSelecionadaObjeto <= hoje){
-        alert("Data invalida! Não é possível abrir agenda para dias passados ou dia atual");
-        return;
+function validarData() {
+    const dataSelecionada = dataComponente.value;
+    if (!dataSelecionada) {
+        alert("Por favor, selecione uma data.");
+        return false;
     }
 
+    const hoje = new Date();
+    const ano = hoje.getFullYear();
+    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+    const dia = String(hoje.getDate()).padStart(2, '0');
+
+    const dataHojeString = `${ano}-${mes}-${dia}`;
+
+    if (dataSelecionada <= dataHojeString) {
+        alert("Data inválida! Não é possível abrir agenda para dias passados ou o dia atual.");
+        return false;
+    }
+
+    return true;
 }
+
+dataComponente.addEventListener("change", validarData);
 
 
 function addProcedimento(){
+    if (!validarData()) {
+        return;
+    }
+
     let dataSelecionada = dataComponente.value;
     let procedimentoSelecionado = procedimentoComponente.value;
     let horarioSelecionado = horarioComponente.value;
+
+    if (dataSelecionada === "" || procedimentoSelecionado === "" || horarioSelecionado === "") {
+        alert("Preencha todos os campos para adicionar o procedimento!");
+        return;
+    }
 
     contador++;
     
@@ -37,21 +53,16 @@ function addProcedimento(){
                             <span>${horarioSelecionado}</span>
                         </div>
                         <div class="btn-container">
-                            <button type="button"class="btn-remover" onclick="deletar(${contador})">remover</button>
+                            <button type="button" class="btn-remover" onclick="deletar(${contador})">Remover</button>
                         </div>
                         <input type="hidden" name="procedimentos[]" value="${procedimentoSelecionado}">
                         <input type="hidden" name="datas[]" value="${dataSelecionada}">
                         <input type="hidden" name="horarios[]" value="${horarioSelecionado}">
                     </div>`;
     
-
-    if(dataSelecionada !== "" && procedimentoSelecionado !== "" && horarioSelecionado !== ""){
-        containerDaListagemProcedimento.innerHTML += componente;
-        return;
-    }
-    alert("Preencha todos os campos, para poder adicionar o procedimento na agenda!");
-        
+    containerDaListagemProcedimento.innerHTML += componente;
 }
+
 
 function deletar(id){
     const elementoParaApagar = document.getElementById("procedimento-"+id);
