@@ -1,19 +1,16 @@
 <?php
 
-include_once('Procedimento.php');
-
-
 class AgendaDisponibilidade{
     private $Id;
     private $Data;
     private $Horario;
-    private $Procedimento;
+    private $NomeProcedimento;
 
-    public function __construct($id=null, $data, $horario, $procedimento){
+    public function __construct($data, $horario, $nomeProcedimento,$id=null){
         $this->Id = $id;
         $this->Data = $data;
         $this->Horario = $horario;
-        $this->Procedimento = $procedimento;
+        $this->NomeProcedimento = $nomeProcedimento;
     }
 
     public function getId(){
@@ -41,12 +38,12 @@ class AgendaDisponibilidade{
         $this->Horario = $horario;
     }
 
-    public function getProcedimento(){
-        return $this->Procedimento;
+    public function getNomeProcedimento(){
+        return $this->NomeProcedimento;
     }
 
-    public function setProcedimento($procedimento){
-        $this->Procedimento = $procedimento;
+    public function setProcedimento($nomeProcedimento){
+        $this->NomeProcedimento = $nomeProcedimento;
     }
 
 }

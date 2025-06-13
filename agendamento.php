@@ -102,10 +102,10 @@ include_once(__DIR__."/classes/view/ProcedimentoView.php");
                         <div class="container-select">
                             <label for="dataHorarioId">Data e horario:</label>
                             <select name="dataHorario" id="dataHorarioId">
+                                <!-- <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
                                 <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
                                 <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
-                                <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
-                                <option value="2025-06-04 10:00:00">04/06/2025 10:00</option>
+                                <option value="2025-06-04 10:00:00">04/06/2025 10:00</option> -->
                             </select>
                         </div>
 
@@ -144,6 +144,7 @@ include_once(__DIR__."/classes/view/ProcedimentoView.php");
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/agendamentoFormulario.js"></script>
     <script src="assets/js/mascaras.js"></script>
-    <script src="assets/js/mandarPrecoParaPhp.js"></script>
+    <script src="assets/js/pegarPrecoDoPhp.js"></script>
+    <script src="assets/js/pegarDisponibilidadeAgendamento.js"></script>
 </body>
 </html>

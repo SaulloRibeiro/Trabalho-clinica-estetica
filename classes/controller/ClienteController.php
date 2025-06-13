@@ -36,7 +36,14 @@ class ClienteController{
         }
     }
 
-
+    public function getIdCliente($email){
+        $sql = $this->ConexaoBancoDados->prepare("SELECT id_cliente FROM clientes WHERE
+        email_cliente = :email");
+        $sql->bindValue(":email", $email);
+        $sql->execute();
+        $resultado = $sql->fetch(PDO::FETCH_ASSOC);
+        return $resultado['id_cliente'];
+    }
 
 
 }

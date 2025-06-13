@@ -10,7 +10,7 @@ class Agendamento{
     private $Data;
     private $Horario;
 
-    public function __construct($id=null, $cliente, $procedimento, $data, $horario){
+    public function __construct($cliente, $procedimento, $data, $horario, $id=null){
         $this->Id = $id;
         $this->Cliente = $cliente;
         $this->Procedimento = $procedimento;
