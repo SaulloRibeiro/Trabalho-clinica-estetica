@@ -71,6 +71,18 @@ class ProcedimentoController{
         $resultado = $sql->fetch(PDO::FETCH_ASSOC);
         return $resultado['id_procedimento'];
     }
+
+    public function atualizarProcedimento($nomeProcedimento, $novoPreco){
+        if ($this->ConexaoBancoDados === null) {
+            $db = new DBconexao();
+            $this->ConexaoBancoDados = $db->conectar();
+        }
+        $sql = $this->ConexaoBancoDados->prepare("UPDATE procedimentos SET 
+        preco_procedimento = :preco WHERE nome_procedimento = :nomeProcedimento");
+        $sql->bindValue(":preco", $novoPreco); 
+        $sql->bindValue(":nomeProcedimento", $nomeProcedimento);
+        $sql->execute();
+    }
 }
 
 

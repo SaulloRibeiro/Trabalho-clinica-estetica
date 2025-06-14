@@ -14,30 +14,29 @@
         
         <main>
             <label for="procedimentoId">selecione o procedimento: </label>  
-            <select name="procedimentos" id="procedimentoId" onchange="escolhaProcedimento()">
-                <option value="" selected disabled>----</option>
+            <select name="procedimento" id="procedimentoId">
                 <optgroup label="Procedimentos capilar">
-                    <option value="hidratacao-capilar">hidratacao capilar</option>
-                    <option value="corte-de-cabelo">Corte de cabelo</option>
-                    <option value="pintura-do-cabelo">pintura do cabelo</option>
+                    <option value="Hidratacao capilar">hidratacao capilar</option>
+                    <option value="Corte de cabelo">Corte de cabelo</option>
+                    <option value="Pintura do cabelo">pintura do cabelo</option>
                 </optgroup>
 
                 <optgroup label="Procedimentos corporais">
-                    <option value="radiofrequencia">radiofrequência</option>
-                    <option value="depilacao">depilação</option>
-                    <option value="drenagem-linfatica">drenagem linfatica</option>
+                    <option value="Radiofrequencia">radiofrequência</option>
+                    <option value="Depilacao">depilação</option>
+                    <option value="Drenagem linfatica">drenagem linfatica</option>
                 </optgroup>
 
                 <optgroup label="Procedimentos faciais">
-                    <option value="botox">botox</option>
-                    <option value="limpeza-pele">limpeza de pele</option>
-                    <option value="nutricao-facial">nutrição facial</option>
+                    <option value="Botox">botox</option>
+                    <option value="Limpeza pele">limpeza de pele</option>
+                    <option value="Nutricao facial">nutrição facial</option>
                 </optgroup>
             </select>
 
-            <form action="">
-                <input class="input-valor-editar" type="text" placeholder="Nome procedimento" value="" disabled>
-                <input class="input-valor-editar" type="text" placeholder="preço" value="" disabled>
+            <form action="classes/services/atualizarProcedimentoService.php" method="get">
+                <input class="input-valor-editar" name="nomeProcedimento" type="text" placeholder="Nome procedimento" value="">
+                R$<input class="input-valor-editar" name="preco" type="text" placeholder="preço" value="" required onblur="validaPreco(this)">
                 <button type="submit">salvar alterações</button>
             </form>
 
