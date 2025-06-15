@@ -6,14 +6,14 @@ include_once('Cliente.php');
 class Agendamento{
     private $Id;
     private $Cliente;
-    private $Procedimento;
+    private $ProcedimentoNome;
     private $Data;
     private $Horario;
 
-    public function __construct($cliente, $procedimento, $data, $horario, $id=null){
+    public function __construct($cliente, $procedimentoNome, $data, $horario, $id=null){
         $this->Id = $id;
         $this->Cliente = $cliente;
-        $this->Procedimento = $procedimento;
+        $this->ProcedimentoNome = $procedimentoNome;
         $this->Data = $data;
         $this->Horario = $horario;
     }
@@ -29,16 +29,16 @@ class Agendamento{
         return $this->Cliente;
     }
 
-    public function setCliente($cliente){
-        $this->Cliente = $cliente;
+    public function setCliente($clienteNome){
+        $this->Cliente = $clienteNome;
     }
 
     public function getProcedimento(){
-        return $this->Procedimento;
+        return $this->ProcedimentoNome;
     }
 
-    public function setProcedimento($procedimento){
-        $this->Procedimento = $procedimento;
+    public function setProcedimento($procedimentoNome){
+        $this->ProcedimentoNome = $procedimentoNome;
     }
 
     public function getData(){
