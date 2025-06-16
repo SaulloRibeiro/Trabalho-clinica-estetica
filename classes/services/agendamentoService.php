@@ -38,7 +38,7 @@ else{
         $idProcedimento = $procedimentoController->getIDProcedimento($nomeProcedimento);
         $agendaDisponibilidadeController =  new AgendaDisponibilidadeController();
     try{
-        $agendamentoController->inserirAgendamento($idCliente, $data, $horario, $nomeProcedimento);
+        $agendamentoController->inserirAgendamento($idCliente, $data, $horario, $idProcedimento);
         $agendaDisponibilidadeController->deletarDisponibilidade($idProcedimento, $horario);
         header("Location: ../../confirmacaoAgendamento.html");
         exit;

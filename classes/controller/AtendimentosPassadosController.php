@@ -25,7 +25,7 @@ class AtendimentoPassadosController{
         }
 
         try{
-            $sql = $this->ConexaoBancoDados->prepare("SELECT * FROM agendamentos_view WHERE data_agendamento = :dataDoAtendimento");
+            $sql = $this->ConexaoBancoDados->prepare("SELECT * FROM agendamentos_view WHERE data_agendamento = :dataDoAtendimento ORDER BY horario_agendado");
             $sql->bindValue(":dataDoAtendimento", $data);
             $sql->execute();
             
