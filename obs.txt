@@ -1,0 +1,13 @@
+Dentro da pasta projeto N1-final contém o backup do banco de dados.
+
+
+
+O login e a senha para acessar a area administrativa é : 
+login->saulloribeiro@gmail.com
+senha->Teste@2025
+
+nome: Saullo Ribeiro Barbosa Santos
+ra: 2704976
+curso: Ciencia da computação
+
+  
