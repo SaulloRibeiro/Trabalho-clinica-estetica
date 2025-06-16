@@ -1,4 +1,11 @@
 @media (max-width: 992px) {
+    :root{
+        --cinza-claro:#E0E0E0;
+        --preto-suave: #1A1A1A;
+        --cinza-escuro: #424242;
+        --cinza-transparente: #9e9e9e;
+        --dourado:#D4AF37;
+    }
 
     ul{
         margin-top: 30px;
@@ -7,6 +14,10 @@
     }
     li{
         width: 100%;
+    }
+
+    i{
+        color: var(--dourado);
     }
 
     a{
@@ -27,7 +38,7 @@
         margin-right: 30px;
         font-size: 30px;
         text-align: center;
-        color: black;
+        color: var(--dourado);
         cursor: pointer;
     }
 
@@ -43,7 +54,7 @@
         z-index: 1000;   
         overflow-y: auto;
         overflow-x: hidden;
-        background-color: white;
+        background-color: var(--cinza-escuro);
     }
 
     nav.menu.ativado{

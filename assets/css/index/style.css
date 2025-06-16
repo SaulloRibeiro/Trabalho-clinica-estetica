@@ -7,6 +7,15 @@
     margin: 0px;
 }
 
+:root{
+    --cinza-claro:#E0E0E0;
+    --preto-suave: #1A1A1A;
+    --cinza-escuro: #424242;
+    --cinza-transparente: #9e9e9e;
+    --dourado:#D4AF37;
+}
+
+
 body{
     font-family: "Work Sans", sans-serif;
 }
@@ -19,6 +28,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--cinza-escuro);
 }
 
 nav{
@@ -41,11 +51,18 @@ li{
     padding: 15px;
 }
 
+li:hover{
+    background-color: var(--cinza-transparente);
+    border-radius: 3px;
+
+}
+
 a{
     font-size: 1em;
     text-decoration: none;
     display: block;
-
+    color: white;
+    color: #D4AF37;
 }
 
 section{
@@ -92,6 +109,10 @@ h1,h2,h3,h4{
     font-family: "Playfair Display", serif;
 }
 
+p,h1,h2,h3,h4{
+    color: var(--preto-suave);
+}
+
 
 
 
@@ -104,6 +125,11 @@ article{
 footer{
     padding: 20px;
     width: 100%;
+    background-color: var(--cinza-escuro);
+}
+
+footer p{
+    color: #D4AF37;
 }
 
 div.logo-empresa{
