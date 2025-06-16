@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__.'/classes/view/ProcedimentosView.php');
+include_once(__DIR__.'/classes/view/ProcedimentoView.php');
 
 $procedimentoView = new ProcedimentoView();
 

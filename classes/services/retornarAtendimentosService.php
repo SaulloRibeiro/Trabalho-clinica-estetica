@@ -20,7 +20,6 @@ foreach($atendimentos as $dado){
         ];
 }
 
-
 header('Content-Type: application/json');
 echo json_encode($dadosFormatados);
 

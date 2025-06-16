@@ -11,7 +11,16 @@ try{
     // $teste = new ClienteController();
     // $teste->inserirCliente($cliente);
 
-    // $test = new ProcedimentoController();
+    $test = new ProcedimentoController();
+    
+    foreach($test->listarProcedimentos("procedimento capilar") as $p){
+        echo "{$p->getNomeImgCorrespondente()}<br>";
+    }
+    
+
+
+
+
     // echo "{$test->consultarPrecoProcedimento("hidratacao capilar")}";
 
     // $teste = new AgendaDisponibilidadeController();
@@ -20,13 +29,13 @@ try{
     // $test = new ClienteController();
     // echo "{$test->getIdCliente("abacaxi@gmail.com")}";
 
-    $teste = new AgendamentoController();
-    $idCliente = 2;
-    $data = "2025-06-12";
-    $horario = "10:00"; 
-    $nomeProcedimento = "teste";
-    $teste->inserirAgendamento($idCliente, $data, $horario, $nomeProcedimento);
-    echo "Deu certo aqui";
+    // $teste = new AgendamentoController();
+    // $idCliente = 2;
+    // $data = "2025-06-12";
+    // $horario = "10:00"; 
+    // $nomeProcedimento = "teste";
+    // $teste->inserirAgendamento($idCliente, $data, $horario, $nomeProcedimento);
+    // echo "Deu certo aqui";
 
 
 }

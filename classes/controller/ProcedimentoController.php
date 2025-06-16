@@ -35,7 +35,7 @@ class ProcedimentoController{
             $descricaoProcedimento = $resultado['descricao'];
             $nomeImgProcedimento = $resultado['nome_img_correspondente'];
             $categoriaProcedimento = $resultado['descricao_categoria'];
-            $procedimento = new Procedimento($idProcedimento, $nomeProcedimento, $precoProcedimento, $descricaoProcedimento, $nomeImgProcedimento, $categoriaProcedimento);
+            $procedimento = new Procedimento($nomeProcedimento, $precoProcedimento, $descricaoProcedimento, $nomeImgProcedimento, $categoriaProcedimento);
             array_push($listaProcedimetos, $procedimento);
         }
 

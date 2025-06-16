@@ -32,7 +32,7 @@ class Procedimento{
     }
 
     public function getValor(){
-        return $this->Valor;
+        return (float)$this->Valor;
     }
     public function setValor($valor){
         $this->Valor = $valor;
